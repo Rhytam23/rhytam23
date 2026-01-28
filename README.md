@@ -3,7 +3,7 @@
 
 
 ## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/i_am_rhytam) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/rhytam-biswas) [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/rhytam01) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/rhytam02) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/BiswasRhyt20481) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:2020sumoy@gmail.com) 
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/i_am_rhytam) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/rhytam-biswas) [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/rhytam01) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/rhytam02) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/BiswasRhyt20481) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:2020sumoy@gmail.com) [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=plastic&logo=vercel&logoColor=white)](rhytam.vercel.app/)
 
 
 # 💻 Tech Stack:
