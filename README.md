@@ -1,6 +1,6 @@
-<p align="center"> <a href="https://git.io/typing-svg"> <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=435&lines=%F0%9F%A7%91%E2%80%8D%F0%9F%92%BBHi+I'm+Rhytam;Backend+Focused+Developer;Fullstack+Web+Engineer;Clean+Code+%7C+Scalable+Systems;Open+to+Collaboration" /> </a> </p>
+<p align="center"> <a href="https://git.io/typing-svg"> <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=520&lines=%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB+Hi+I'm+Rhytam;Backend+Focused+Developer;Fullstack+Web+Engineer;Clean+Code+%7C+Scalable+Systems;Open+to+Collaboration"/> </a> </p>
 
-# <br>
+# 
 
 # 💫 About Me:
 👋 Hi, I’m @Rhytam-23<br>👀 I’m interested in Coding, learning new coding languages,<br>🌱 I’m currently learning Python, C<br>💞️ I’m looking to collaborate on a Small public project<br>📫 How to reach me: 2020sumoy@gmail.com<br>😄 Pronouns: He/Him<br>⚡ Fun fact: I am a better orator than a narrator. Always there to help you
@@ -10,16 +10,16 @@
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=plastic&logo=telegram&logoColor=white)](https://t.me/Teslahouse_bot) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=plastic&logo=Instagram&logoColor=white)](https://instagram.com/i_am_rhytam) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=plastic&logo=linkedin&logoColor=white)](https://linkedin.com/in/rhytam-biswas) [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?style=plastic&logo=Pinterest&logoColor=white)](https://pinterest.com/rhytam01) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?style=plastic&logo=Twitch&logoColor=white)](https://twitch.tv/rhytam02) [![X](https://img.shields.io/badge/X-black.svg?style=plastic&logo=X&logoColor=white)](https://x.com/BiswasRhyt20481) [![email](https://img.shields.io/badge/Email-D14836?style=plastic&logo=gmail&logoColor=white)](mailto:2020sumoy@gmail.com) [![Vercel](https://img.shields.io/badge/rhytam-%23000000.svg?style=plastic&logo=vercel&logoColor=white)](https://rhytam.vercel.app/)
 
 
-# 💻 Tech Stack:
+## 💻 Tech Stack:
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=plastic&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=plastic&logo=c%2B%2B&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=plastic&logo=openjdk&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=plastic&logo=vercel&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54) ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=plastic&logo=microsoft%20sql%20server&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=plastic&logo=mongodb&logoColor=white) ![Framer](https://img.shields.io/badge/Framer-black?style=plastic&logo=framer&logoColor=blue) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=plastic&logo=figma&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=plastic&logo=Canva&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white)
 
-# 📊 GitHub Stats:
+## 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=Rhytam23&theme=ocean_dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=Rhytam23&theme=ocean_dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Rhytam23&theme=ocean_dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
 
-### 🔝 Top Contributed Repo
+## 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=Rhytam23&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
 ---
