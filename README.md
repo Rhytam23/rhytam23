@@ -1,7 +1,6 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=435&lines=%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB+Hi+I'm+Rhytam+;Backend+and+Fullstack+developer;Building+jaw-dropping+websites+)](https://git.io/typing-svg)
+<p align="center"> <a href="https://git.io/typing-svg"> <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=435&lines=%F0%9F%A7%91%E2%80%8D%F0%9F%92%BBHi+I'm+Rhytam;Backend+Focused+Developer;Fullstack+Web+Engineer;Clean+Code+%7C+Scalable+Systems;Open+to+Collaboration" /> </a> </p>
 
-# 
-<br>
+# <br>
 
 # 💫 About Me:
 👋 Hi, I’m @Rhytam-23<br>👀 I’m interested in Coding, learning new coding languages,<br>🌱 I’m currently learning Python, C<br>💞️ I’m looking to collaborate on a Small public project<br>📫 How to reach me: 2020sumoy@gmail.com<br>😄 Pronouns: He/Him<br>⚡ Fun fact: I am a better orator than a narrator. Always there to help you
