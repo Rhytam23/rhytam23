@@ -3,7 +3,7 @@
 # 
 
 # 💫 About Me:
-👋 Hi, I’m @Rhytam-23<br>👀 I’m interested in Coding, learning new coding languages,<br>🌱 I’m currently learning Python, C<br>💞️ I’m looking to collaborate on a Small public project<br>📫 How to reach me:[mail] 2020sumoy@gmail.com<br>😄 Pronouns: He/Him<br>⚡ Fun fact: I am a better orator than a narrator. Always there to help you
+👋 Hi, I’m @Rhytam-23<br>👀 I’m interested in Coding, learning new coding languages,<br>🌱 I’m currently learning Python, C<br>💞️ I’m looking to collaborate on a Small public project<br>😄 Pronouns: He/Him<br>⚡ Fun fact: I am a better orator than a narrator. Always there to help you
 
 
 ## 🌐 Socials:
