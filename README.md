@@ -14,40 +14,22 @@
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=plastic&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=plastic&logo=c%2B%2B&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=plastic&logo=openjdk&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=plastic&logo=vercel&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54) ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=plastic&logo=microsoft%20sql%20server&logoColor=white) </br> </br> ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=plastic&logo=mongodb&logoColor=white) ![Framer](https://img.shields.io/badge/Framer-black?style=plastic&logo=framer&logoColor=blue) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=plastic&logo=figma&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=plastic&logo=Canva&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white)
 
 ## 📊 GitHub Stats:
-<p><img src="assets/stats.svg" alt="GitHub stats" width="400"/> <img src="assets/langs.svg" alt="Top languages" width="400"/></p>
+<p align="center"><img src="assets/stats.svg" alt="GitHub stats" width="400" align="top"/> <img src="assets/langs.svg" alt="Top languages" width="400" align="top"/></p>
 
 
-## 🚀 Featured Projects
-<!--FEATURED:START-->
-| Project | About | Language | Stars |
-|---|---|---|---:|
-| [note-saver](https://github.com/Rhytam23/note-saver) | NoteNirman: a free, offline-first notes app for students. Web, Windows, Android and Telegram, with sync, tags and math. Source-available (PolyForm Noncommercial). | TypeScript | 0 |
-| [kaavalu](https://github.com/Rhytam23/kaavalu) | - | Python | 0 |
-| [eviq-ai](https://github.com/Rhytam23/eviq-ai) | - | TypeScript | 0 |
-| [geodesis](https://github.com/Rhytam23/geodesis) | Geospatial digital twin and research agent for climate-resilient rice farming in the Mekong Delta. Nemotron on Nebius Token Factory, live evidence via Tavily. | TypeScript | 0 |
-| [asia101](https://github.com/Rhytam23/asia101) | - | TypeScript | 0 |
-| [pocketdeck](https://github.com/Rhytam23/pocketdeck) | Phone-first app to watch, steer and approve any AI coding agent on any machine. Early planning. | TypeScript | 0 |
-<!--FEATURED:END-->
-
-## ⚡ Recent Activity
+## ⚡ Recent Merged PRs
 <!--ACTIVITY:START-->
-- `2026-11-14` 🔀 Closed PR [Rhytam23/coucou#33](https://github.com/Rhytam23/coucou/pull/33)
-- `2026-11-14` 🔀 Opened PR [Rhytam23/coucou#33](https://github.com/Rhytam23/coucou/pull/33)
-- `2026-11-13` 🔀 Opened PR [Louis-CFM/coucou#1098](https://github.com/Louis-CFM/coucou/pull/1098)
-- `2026-11-12` 🔀 Opened PR [Louis-CFM/coucou#1090](https://github.com/Louis-CFM/coucou/pull/1090)
-- `2026-11-12` 🔀 Opened PR [Louis-CFM/coucou#1089](https://github.com/Louis-CFM/coucou/pull/1089)
-- `2026-11-09` 🔀 Closed PR [vicharanashala/vibe#1433](https://github.com/vicharanashala/vibe/pull/1433)
+- `2026-11-18` 🟣 **Merged** - [feat(client): switch the student dashboard to the new theme (part 2 of 2, depend](https://github.com/vicharanashala/spurti/pull/243)
+- `2026-11-18` 🟣 **Merged** - [feat(client): add UI building blocks and theme (part 1 of 2, no visible change)](https://github.com/vicharanashala/spurti/pull/242)
+- `2026-11-18` 🟣 **Merged** - [fix(server): route rejected async handlers to an error middleware](https://github.com/vicharanashala/spurti/pull/228)
+- `2026-11-12` 🟣 **Merged** - [Windows and Linux: Flow can hide the pill until you dictate](https://github.com/Louis-CFM/coucou/pull/1090)
+- `2026-11-12` 🟣 **Merged** - [Android 0.5.0: swipe the island away, Do Not Disturb, six more languages, a stea](https://github.com/Louis-CFM/coucou/pull/1089)
+- `2026-11-03` 🟣 **Merged** - [Android 0.4.0: the Mac can link with Coucou for Android](https://github.com/Louis-CFM/coucou/pull/1054)
 <!--ACTIVITY:END-->
 
 ## 🔝 Top Contributed Repo
 <!--TOP-REPOS:START-->
-| Repo | Commits | Language | ⭐ |
-|---|---:|---|---:|
-| [Rhytam23/note-saver](https://github.com/Rhytam23/note-saver) | 199 | TypeScript | 0 |
-| [Rhytam23/social](https://github.com/Rhytam23/social) | 133 | TypeScript | 1 |
-| [Rhytam23/nitisetu](https://github.com/Rhytam23/nitisetu) | 45 | JavaScript | 0 |
-| [Rhytam23/ccn](https://github.com/Rhytam23/ccn) | 45 | Python | 0 |
-| [Louis-CFM/coucou](https://github.com/Louis-CFM/coucou) | 40 | Swift | 7326 |
+<img src="assets/top-repos.svg" alt="Top contributed repos" width="820"/>
 <!--TOP-REPOS:END-->
 
 ---

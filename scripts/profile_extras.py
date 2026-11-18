@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate featured projects, recent activity, and self-hosted stats SVGs for the profile README."""
+"""Generate the profile README's dynamic parts: stats/language/top-repo SVG cards and merged-PR activity."""
 import json, os, re, subprocess, datetime as dt
 from html import escape
 
@@ -7,7 +7,8 @@ USER = os.environ.get("GH_USER", "Rhytam23")
 
 
 def gh(*args):
-    return json.loads(subprocess.run(["gh", *args], capture_output=True, text=True, check=True, encoding="utf-8").stdout)
+    out = subprocess.run(["gh", *args], capture_output=True, text=True, check=True, encoding="utf-8").stdout
+    return json.loads(out)
 
 
 def gql(query, **vars):
@@ -25,64 +26,31 @@ def replace_block(text, name, body):
     return new
 
 
-# ---------- data ----------
-now = dt.datetime.now(dt.timezone.utc)
-frm = (now - dt.timedelta(days=364)).strftime("%Y-%m-%dT%H:%M:%SZ")
-to = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+def iso(t):
+    return t.strftime("%Y-%m-%dT%H:%M:%SZ")
 
+
+now = dt.datetime.now(dt.timezone.utc)
+
+# ---------------------------------------------------------------- data
 d = gql("""query($login:String!,$from:DateTime!,$to:DateTime!){
  user(login:$login){
   followers{totalCount}
   contributionsCollection(from:$from,to:$to){
     totalCommitContributions totalPullRequestContributions totalIssueContributions
-    contributionCalendar{totalContributions weeks{contributionDays{date contributionCount}}}
+    contributionCalendar{weeks{contributionDays{date contributionCount}}}
   }
   repositories(ownerAffiliations:OWNER,privacy:PUBLIC,isFork:false,first:100,orderBy:{field:PUSHED_AT,direction:DESC}){
     totalCount
-    nodes{name url description stargazerCount pushedAt primaryLanguage{name}
+    nodes{name stargazerCount
           languages(first:8,orderBy:{field:SIZE,direction:DESC}){edges{size node{name color}}}}
   }
- }}""", login=USER, **{"from": frm, "to": to})["user"]
+ }}""", login=USER, **{"from": iso(now - dt.timedelta(days=364)), "to": iso(now)})["user"]
 
-repos = [r for r in d["repositories"]["nodes"] if r["name"].lower() != USER.lower()]
+repos = d["repositories"]["nodes"]
 cc = d["contributionsCollection"]
 
-# ---------- featured projects ----------
-rows = ["| Project | About | Language | Stars |", "|---|---|---|---:|"]
-for r in repos[:6]:
-    desc = (r["description"] or "-").replace("|", "\\|")
-    lang = (r["primaryLanguage"] or {}).get("name", "-")
-    rows.append(f"| [{r['name']}]({r['url']}) | {desc} | {lang} | {r['stargazerCount']} |")
-featured = "\n".join(rows)
-
-# ---------- recent activity ----------
-ev = gh("api", f"users/{USER}/events/public?per_page=100")
-items = []
-for e in ev:
-    repo = e["repo"]["name"]
-    link = f"https://github.com/{repo}"
-    day = e["created_at"][:10]
-    t, p = e["type"], e["payload"]
-    if t == "PushEvent" and p.get("commits"):
-        msg = p["commits"][-1]["message"].splitlines()[0][:70]
-        items.append(f"- `{day}` \U0001F528 Pushed to [{repo}]({link}) - {msg}")
-    elif t == "PullRequestEvent" and p.get("action") in ("opened", "closed"):
-        pr = p["pull_request"]
-        verb = "Merged" if pr.get("merged") else p["action"].capitalize()
-        items.append(f"- `{day}` \U0001F500 {verb} PR [{repo}#{pr['number']}](https://github.com/{repo}/pull/{pr['number']})")
-    elif t == "IssuesEvent" and p.get("action") == "opened":
-        i = p["issue"]
-        items.append(f"- `{day}` \U0001F41B Opened issue [{repo}#{i['number']}](https://github.com/{repo}/issues/{i['number']})")
-    elif t == "CreateEvent" and p.get("ref_type") == "repository":
-        items.append(f"- `{day}` ✨ Created [{repo}]({link})")
-seen, act = set(), []
-for i in items:
-    if i not in seen:
-        seen.add(i)
-        act.append(i)
-activity = "\n".join(act[:6]) or "_No recent public activity._"
-
-# ---------- streaks ----------
+# ---------------------------------------------------------------- streaks
 days = [x for w in cc["contributionCalendar"]["weeks"] for x in w["contributionDays"]]
 days = [x for x in days if x["date"] <= now.strftime("%Y-%m-%d")]
 longest = run = 0
@@ -98,31 +66,53 @@ for idx in range(len(days) - 1, -1, -1):
     else:
         break
 
-# ---------- svg helpers ----------
-BG, FG, MUTED, ACC = "#0d1117", "#e6edf3", "#8b949e", "#58a6ff"
+# ---------------------------------------------------------------- svg helpers
 FONT = "font-family='Segoe UI,Ubuntu,Helvetica,Arial,sans-serif'"
+FG, MUTED = "#e6edf3", "#8b949e"
+DEFS = ("<defs>"
+        "<linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#0d1117'/>"
+        "<stop offset='1' stop-color='#1b1f3b'/></linearGradient>"
+        "<linearGradient id='ttl' x1='0' y1='0' x2='1' y2='0'><stop offset='0' stop-color='#58a6ff'/>"
+        "<stop offset='.55' stop-color='#a371f7'/><stop offset='1' stop-color='#f778ba'/></linearGradient>"
+        "<linearGradient id='bar' x1='0' y1='0' x2='1' y2='0'><stop offset='0' stop-color='#58a6ff'/>"
+        "<stop offset='1' stop-color='#a371f7'/></linearGradient>"
+        "</defs>")
 
 
 def svg(w, h, body):
-    return (f"<svg xmlns='http://www.w3.org/2000/svg' width='{w}' height='{h}' viewBox='0 0 {w} {h}'>"
-            f"<rect x='.5' y='.5' width='{w-1}' height='{h-1}' rx='8' fill='{BG}' stroke='#30363d'/>{body}</svg>")
+    return (f"<svg xmlns='http://www.w3.org/2000/svg' width='{w}' height='{h}' viewBox='0 0 {w} {h}'>{DEFS}"
+            f"<rect x='.5' y='.5' width='{w-1}' height='{h-1}' rx='10' fill='url(#bg)' stroke='#3d4466'/>"
+            f"<rect x='.5' y='.5' width='{w-1}' height='4' rx='2' fill='url(#ttl)'/>{body}</svg>")
 
 
-stats = [("Commits (1y)", cc["totalCommitContributions"]), ("Pull requests", cc["totalPullRequestContributions"]),
-         ("Issues", cc["totalIssueContributions"]), ("Public repos", d["repositories"]["totalCount"]),
-         ("Stars earned", sum(r["stargazerCount"] for r in repos)), ("Followers", d["followers"]["totalCount"])]
-b = f"<text x='20' y='32' fill='{ACC}' font-size='18' font-weight='600' {FONT}>{escape(USER)} - GitHub Stats</text>"
-for i, (k, v) in enumerate(stats):
-    x, y = 20 + (i % 2) * 190, 64 + (i // 2) * 30
-    b += f"<text x='{x}' y='{y}' fill='{MUTED}' font-size='13' {FONT}>{k}</text>"
-    b += f"<text x='{x+160}' y='{y}' fill='{FG}' font-size='13' font-weight='600' text-anchor='end' {FONT}>{v}</text>"
-b += "<line x1='20' y1='150' x2='380' y2='150' stroke='#30363d'/>"
-for i, (k, v) in enumerate([("Current streak", f"{cur} days"), ("Longest streak", f"{longest} days")]):
-    x = 20 + i * 190
-    b += f"<text x='{x}' y='176' fill='{MUTED}' font-size='13' {FONT}>{k}</text>"
-    b += f"<text x='{x}' y='198' fill='{FG}' font-size='16' font-weight='600' {FONT}>{v}</text>"
-open("assets/stats.svg", "w", encoding="utf-8").write(svg(400, 215, b))
+def title(text):
+    return f"<text x='22' y='36' fill='url(#ttl)' font-size='19' font-weight='700' {FONT}>{escape(text)}</text>"
 
+
+H = 220  # shared height so cards sit level
+
+# ---------------------------------------------------------------- stats card
+stats = [("Commits (1y)", cc["totalCommitContributions"], "#3fb950"),
+         ("Pull requests", cc["totalPullRequestContributions"], "#a371f7"),
+         ("Issues", cc["totalIssueContributions"], "#f0883e"),
+         ("Public repos", d["repositories"]["totalCount"], "#58a6ff"),
+         ("Stars earned", sum(r["stargazerCount"] for r in repos), "#e3b341"),
+         ("Followers", d["followers"]["totalCount"], "#f778ba")]
+b = title(f"{USER} - GitHub Stats")
+for i, (k, v, c) in enumerate(stats):
+    x, y = 22 + (i % 2) * 190, 68 + (i // 2) * 30
+    b += f"<circle cx='{x+5}' cy='{y-4}' r='5' fill='{c}'/>"
+    b += f"<text x='{x+18}' y='{y}' fill='{MUTED}' font-size='13' {FONT}>{k}</text>"
+    b += f"<text x='{x+162}' y='{y}' fill='{c}' font-size='14' font-weight='700' text-anchor='end' {FONT}>{v}</text>"
+b += "<line x1='22' y1='158' x2='378' y2='158' stroke='#3d4466'/>"
+for i, (k, v, c) in enumerate([("Current streak", cur, "#ff9640"), ("Longest streak", longest, "#3fb950")]):
+    x = 22 + i * 190
+    b += f"<text x='{x}' y='181' fill='{MUTED}' font-size='13' {FONT}>{k}</text>"
+    b += (f"<text x='{x}' y='205' fill='{c}' font-size='22' font-weight='700' {FONT}>{v}"
+          f"<tspan fill='{MUTED}' font-size='13' font-weight='400'> day{'s' if v != 1 else ''}</tspan></text>")
+open("assets/stats.svg", "w", encoding="utf-8").write(svg(400, H, b))
+
+# ---------------------------------------------------------------- languages card
 lang, color = {}, {}
 for r in repos:
     for e in r["languages"]["edges"]:
@@ -131,24 +121,65 @@ for r in repos:
         color[n] = e["node"]["color"] or "#8b949e"
 top = sorted(lang.items(), key=lambda kv: -kv[1])[:6]
 tot = sum(v for _, v in top) or 1
-b = f"<text x='20' y='32' fill='{ACC}' font-size='18' font-weight='600' {FONT}>Top Languages</text>"
-x = 20.0
-b += "<clipPath id='c'><rect x='20' y='46' width='360' height='10' rx='5'/></clipPath><g clip-path='url(#c)'>"
-for n, v in top:
-    w = 360 * v / tot
-    b += f"<rect x='{x:.1f}' y='46' width='{w:.1f}' height='10' fill='{color[n]}'/>"
-    x += w
-b += "</g>"
+b = title("Top Languages")
 for i, (n, v) in enumerate(top):
-    cx, cy = 20 + (i % 2) * 190, 82 + (i // 2) * 26
-    b += f"<circle cx='{cx+5}' cy='{cy-4}' r='5' fill='{color[n]}'/>"
-    b += (f"<text x='{cx+16}' y='{cy}' fill='{FG}' font-size='13' {FONT}>{escape(n)} "
-          f"<tspan fill='{MUTED}'>{100*v/tot:.1f}%</tspan></text>")
-open("assets/langs.svg", "w", encoding="utf-8").write(svg(400, 170, b))
+    y = 64 + i * 26
+    pct = 100 * v / tot
+    b += f"<text x='22' y='{y}' fill='{FG}' font-size='13' {FONT}>{escape(n)}</text>"
+    b += f"<rect x='130' y='{y-10}' width='200' height='10' rx='5' fill='#21262d'/>"
+    b += f"<rect x='130' y='{y-10}' width='{max(200*pct/100, 6):.1f}' height='10' rx='5' fill='{color[n]}'/>"
+    b += f"<text x='378' y='{y}' fill='{color[n]}' font-size='13' font-weight='700' text-anchor='end' {FONT}>{pct:.1f}%</text>"
+open("assets/langs.svg", "w", encoding="utf-8").write(svg(400, H, b))
 
-# ---------- write README ----------
+# ---------------------------------------------------------------- top contributed repos card
+tc = {}
+meta = {}
+for i in range(3):  # commit API allows max one year per query
+    to = now - dt.timedelta(days=365 * i)
+    data = gql("""query($login:String!,$from:DateTime!,$to:DateTime!){
+     user(login:$login){contributionsCollection(from:$from,to:$to){
+      commitContributionsByRepository(maxRepositories:100){
+        contributions{totalCount}
+        repository{nameWithOwner isPrivate primaryLanguage{name color}}}}}}""",
+               login=USER, **{"from": iso(to - dt.timedelta(days=365)), "to": iso(to)})
+    for c in data["user"]["contributionsCollection"]["commitContributionsByRepository"]:
+        r = c["repository"]
+        if r["isPrivate"]:
+            continue  # never expose private repo names
+        tc[r["nameWithOwner"]] = tc.get(r["nameWithOwner"], 0) + c["contributions"]["totalCount"]
+        meta[r["nameWithOwner"]] = r
+best = sorted(tc.items(), key=lambda kv: -kv[1])[:5]
+mx = best[0][1] if best else 1
+b = title("Top Contributed Repos")
+for i, (name, n) in enumerate(best):
+    y = 72 + i * 36
+    pl = meta[name]["primaryLanguage"] or {}
+    c = pl.get("color") or "#58a6ff"
+    b += f"<circle cx='30' cy='{y-5}' r='6' fill='{c}'/>"
+    b += f"<text x='46' y='{y}' fill='{FG}' font-size='15' font-weight='600' {FONT}>{escape(name)}</text>"
+    b += f"<text x='290' y='{y}' fill='{c}' font-size='12' {FONT}>{escape(pl.get('name', ''))}</text>"
+    b += f"<rect x='390' y='{y-11}' width='340' height='12' rx='6' fill='#21262d'/>"
+    b += f"<rect x='390' y='{y-11}' width='{max(340*n/mx, 8):.1f}' height='12' rx='6' fill='{c}'/>"
+    b += f"<text x='798' y='{y}' fill='{FG}' font-size='14' font-weight='700' text-anchor='end' {FONT}>{n}"
+    b += f"<tspan fill='{MUTED}' font-size='12' font-weight='400'> commits</tspan></text>"
+open("assets/top-repos.svg", "w", encoding="utf-8").write(svg(820, 72 + 36 * max(len(best), 1) + 6, b))
+
+# ---------------------------------------------------------------- merged PR activity
+res = gql("""query($q:String!){search(query:$q,type:ISSUE,first:50){nodes{
+  ... on PullRequest{title url mergedAt repository{isPrivate}}}}}""",
+          q=f"author:{USER} is:pr is:merged sort:updated-desc")["search"]["nodes"]
+prs = [p for p in res if p and p.get("mergedAt") and not p["repository"]["isPrivate"]]
+prs.sort(key=lambda p: p["mergedAt"], reverse=True)
+lines = []
+for p in prs[:6]:
+    t = re.sub(r"([\[\]])", r"\\\1", p["title"].strip())[:80]
+    lines.append(f"- `{p['mergedAt'][:10]}` \U0001F7E3 **Merged** - [{t}]({p['url']})")
+activity = "\n".join(lines) or "_No merged pull requests yet._"
+
+# ---------------------------------------------------------------- README
 t = open("README.md", encoding="utf-8", newline="").read()
-t = replace_block(t, "FEATURED", featured)
 t = replace_block(t, "ACTIVITY", activity)
+t = replace_block(t, "TOP-REPOS", '<img src="assets/top-repos.svg" alt="Top contributed repos" width="820"/>')
 open("README.md", "w", encoding="utf-8", newline="").write(t)
-print(featured, "\n", activity, "\n", stats, cur, longest, top)
+print(activity)
+print(best)
