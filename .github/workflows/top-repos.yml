@@ -1,4 +1,4 @@
-name: Update Top Contributed Repos
+name: Update Profile README
 
 on:
   schedule:
@@ -15,7 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Regenerate README block
-        run: python3 scripts/top_repos.py
+        run: |
+          python3 scripts/top_repos.py
+          python3 scripts/profile_extras.py
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
@@ -23,5 +25,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git diff --cached --quiet || (git commit -m "Update top contributed repos [skip ci]" && git push)
+          git add README.md assets
+          git diff --cached --quiet || (git commit -m "Update profile README [skip ci]" && git push)
