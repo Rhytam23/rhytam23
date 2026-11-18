@@ -16,7 +16,7 @@ A free, **offline-first notes app for students**: web (installable PWA), Windows
 Notes save to the device first and sync in the background, so nothing is lost when the connection drops.
 Flashcards from plain `Question:: Answer` lines, linked notes with backlinks, 13 seasonal themes, and Gemini for summaries.
 
-[![Get it on Microsoft Store](assets/badges/nn-store.svg)](https://apps.microsoft.com/detail/9n4zx7brl3vz?hl=en-GB&gl=IN) [![Try the web app](assets/badges/nn-web-app.svg)](https://notenirman.vercel.app) [![Source code](assets/badges/nn-source.svg)](https://github.com/Rhytam23/note-saver) [![Windows and Android downloads](assets/badges/nn-downloads.svg)](https://github.com/Rhytam23/note-saver/releases/latest) [![Telegram bot](assets/badges/nn-telegram.svg)](https://t.me/notenirman_bot)
+[![Get it on Microsoft Store](assets/badges/nn-store.svg)](https://apps.microsoft.com/detail/9n4zx7brl3vz?hl=en-GB&gl=IN) [![Try the web app](assets/badges/nn-web-app.svg)](https://notenirman.vercel.app) [![Source code](assets/badges/nn-source.svg)](https://github.com/Rhytam23/note-saver) [![Telegram bot](assets/badges/nn-telegram.svg)](https://t.me/notenirman_bot)
 
 
 ## 🌐 Socials:
