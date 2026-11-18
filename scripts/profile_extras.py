@@ -172,7 +172,10 @@ prs = [p for p in res if p and p.get("mergedAt") and not p["repository"]["isPriv
 prs.sort(key=lambda p: p["mergedAt"], reverse=True)
 lines = []
 for p in prs[:6]:
-    t = re.sub(r"([\[\]])", r"\\\1", p["title"].strip())[:80]
+    t = p["title"].strip()
+    if len(t) > 62:
+        t = t[:62].rsplit(" ", 1)[0].rstrip(",:;-(") + "…"
+    t = re.sub(r"([\[\]])", r"\\\1", t)
     lines.append(f"- `{p['mergedAt'][:10]}` \U0001F7E3 **Merged** - [{t}]({p['url']})")
 activity = "\n".join(lines) or "_No merged pull requests yet._"
 
