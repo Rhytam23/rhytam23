@@ -24,23 +24,8 @@ Flashcards from plain `Question:: Answer` lines, linked notes with backlinks, 13
 
 
 ## 💻 Tech Stack:
-**Languages**<br>
-![Python](assets/badges/python.svg) ![TypeScript](assets/badges/typescript.svg) ![JavaScript](assets/badges/javascript.svg) ![C](assets/badges/c-2.svg) ![C++](assets/badges/c.svg) ![Java](assets/badges/java.svg) ![SQL](assets/badges/sql.svg)
-
-**Frontend**<br>
-![React](assets/badges/react.svg) ![Next.js](assets/badges/next-js.svg) ![Vite](assets/badges/vite.svg) ![Tailwind CSS](assets/badges/tailwind-css.svg) ![Framer Motion](assets/badges/framer-motion.svg) ![Three.js](assets/badges/three-js.svg)
-
-**Backend & Data**<br>
-![Node.js](assets/badges/node-js.svg) ![Express](assets/badges/express.svg) ![MongoDB](assets/badges/mongodb.svg) ![Supabase](assets/badges/supabase.svg) ![Socket.IO](assets/badges/socket-io.svg) ![Microsoft SQL Server](assets/badges/microsoft-sql-server.svg) ![Pandas](assets/badges/pandas.svg) ![NumPy](assets/badges/numpy.svg) ![PyTorch](assets/badges/pytorch.svg)
-
-**Cloud & AI**<br>
-![Google Cloud](assets/badges/google-cloud.svg) ![Vertex AI](assets/badges/vertex-ai.svg) ![Gemini](assets/badges/gemini.svg) ![Streamlit](assets/badges/streamlit.svg) ![Kubernetes](assets/badges/kubernetes.svg)
-
-**Apps & Tooling**<br>
-![Tauri](assets/badges/tauri.svg) ![Capacitor](assets/badges/capacitor.svg) ![Docker](assets/badges/docker.svg) ![Git](assets/badges/git.svg) ![GitHub Actions](assets/badges/github-actions.svg) ![Vitest](assets/badges/vitest.svg) ![Playwright](assets/badges/playwright.svg) ![Vercel](assets/badges/vercel.svg)
-
-**Design**<br>
-![Figma](assets/badges/figma.svg) ![Canva](assets/badges/canva.svg)
+![Python](assets/badges/python.svg) ![TypeScript](assets/badges/typescript.svg) ![JavaScript](assets/badges/javascript.svg) ![React](assets/badges/react.svg) ![Next.js](assets/badges/next-js.svg) ![Tailwind CSS](assets/badges/tailwind-css.svg) ![Node.js](assets/badges/node-js.svg) ![Express](assets/badges/express.svg)<br>
+![MongoDB](assets/badges/mongodb.svg) ![Supabase](assets/badges/supabase.svg) ![Tauri](assets/badges/tauri.svg) ![Capacitor](assets/badges/capacitor.svg) ![Docker](assets/badges/docker.svg) ![Google Cloud](assets/badges/google-cloud.svg) ![Gemini](assets/badges/gemini.svg)
 
 
 ## 📊 GitHub Stats:
