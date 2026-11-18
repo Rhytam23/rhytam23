@@ -150,7 +150,7 @@ for i in range(3):  # commit API allows max one year per query
         meta[r["nameWithOwner"]] = r
 best = sorted(tc.items(), key=lambda kv: -kv[1])[:5]
 mx = best[0][1] if best else 1
-b = title("Top Contributed Repos")
+b = title("Most commits - last 3 years")
 for i, (name, n) in enumerate(best):
     y = 72 + i * 36
     pl = meta[name]["primaryLanguage"] or {}
@@ -158,8 +158,8 @@ for i, (name, n) in enumerate(best):
     b += f"<circle cx='30' cy='{y-5}' r='6' fill='{c}'/>"
     b += f"<text x='46' y='{y}' fill='{FG}' font-size='15' font-weight='600' {FONT}>{escape(name)}</text>"
     b += f"<text x='290' y='{y}' fill='{c}' font-size='12' {FONT}>{escape(pl.get('name', ''))}</text>"
-    b += f"<rect x='390' y='{y-11}' width='340' height='12' rx='6' fill='#21262d'/>"
-    b += f"<rect x='390' y='{y-11}' width='{max(340*n/mx, 8):.1f}' height='12' rx='6' fill='{c}'/>"
+    b += f"<rect x='390' y='{y-11}' width='300' height='12' rx='6' fill='#21262d'/>"
+    b += f"<rect x='390' y='{y-11}' width='{max(300*n/mx, 8):.1f}' height='12' rx='6' fill='{c}'/>"
     b += f"<text x='798' y='{y}' fill='{FG}' font-size='14' font-weight='700' text-anchor='end' {FONT}>{n}"
     b += f"<tspan fill='{MUTED}' font-size='12' font-weight='400'> commits</tspan></text>"
 open("assets/top-repos.svg", "w", encoding="utf-8").write(svg(820, 72 + 36 * max(len(best), 1) + 6, b))
