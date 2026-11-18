@@ -6,6 +6,19 @@
 👋 Hi, I’m @Rhytam23<br>👀 I’m interested in Coding, learning new coding languages,<br>🌱 I’m building NoteNirman, an offline-first notes app live on the Microsoft Store<br>🎓 Studying Data Science at IIT Madras<br>💼 Open for freelance builds<br>💞️ I’m looking to collaborate on a Small public project<br>😄 Pronouns: He/Him<br>⚡ Fun fact: I am a better orator than a narrator. Always there to help you
 
 
+## 🪔 What I'm building: NoteNirman
+
+<p align="center">
+  <a href="https://notenirman.vercel.app"><img src="assets/notenirman-themes.gif" alt="NoteNirman switching between seasonal themes" width="720"/></a>
+</p>
+
+A free, **offline-first notes app for students**: web (installable PWA), Windows, Android and a Telegram bot.
+Notes save to the device first and sync in the background, so nothing is lost when the connection drops.
+Flashcards from plain `Question:: Answer` lines, linked notes with backlinks, 13 seasonal themes, and Gemini for summaries.
+
+[**Try the web app**](https://notenirman.vercel.app) &middot; [Source code](https://github.com/Rhytam23/note-saver) &middot; [Windows and Android downloads](https://github.com/Rhytam23/note-saver/releases/latest) &middot; [Telegram bot](https://t.me/notenirman_bot)
+
+
 ## 🌐 Socials:
 [![Telegram](assets/badges/telegram.svg)](https://t.me/Teslahouse_bot) [![Instagram](assets/badges/instagram-e4405f-svg.svg)](https://instagram.com/i_am_rhytam) [![LinkedIn](assets/badges/linkedin-0077b5-svg.svg)](https://linkedin.com/in/rhytam-biswas) [![Pinterest](assets/badges/pinterest-e60023-svg.svg)](https://pinterest.com/rhytam01) [![Twitch](assets/badges/twitch-9146ff-svg.svg)](https://twitch.tv/rhytam02) [![X](assets/badges/x-black-svg.svg)](https://x.com/BiswasRhyt20481) [![email](assets/badges/email.svg)](mailto:2020sumoy@gmail.com) [![Vercel](assets/badges/rhytam-000000-svg.svg)](https://rhytam.vercel.app/)
 
