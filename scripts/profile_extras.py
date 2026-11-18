@@ -69,43 +69,46 @@ for idx in range(len(days) - 1, -1, -1):
 # ---------------------------------------------------------------- svg helpers
 FONT = "font-family='Segoe UI,Ubuntu,Helvetica,Arial,sans-serif'"
 FG, MUTED = "#e6edf3", "#8b949e"
-DEFS = ("<defs>"
-        "<linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#0d1117'/>"
-        "<stop offset='1' stop-color='#1b1f3b'/></linearGradient>"
-        "<linearGradient id='ttl' x1='0' y1='0' x2='1' y2='0'><stop offset='0' stop-color='#58a6ff'/>"
-        "<stop offset='.55' stop-color='#a371f7'/><stop offset='1' stop-color='#f778ba'/></linearGradient>"
-        "<linearGradient id='bar' x1='0' y1='0' x2='1' y2='0'><stop offset='0' stop-color='#58a6ff'/>"
-        "<stop offset='1' stop-color='#a371f7'/></linearGradient>"
-        "</defs>")
+TITLE, TRACK, LINE = "#c9d1d9", "#21262d", "#30363d"
+
+# Muted, earthy palette (no violet, no neon). Languages get a fixed colour so cards stay consistent.
+PALETTE = {"TypeScript": "#4f7cac", "JavaScript": "#b8934a", "Python": "#5f9e7f", "CSS": "#6a9aa6",
+           "PLpgSQL": "#8a8f98", "HTML": "#b0675f", "Swift": "#c07a52"}
+FALLBACK = ["#7f8c6a", "#a8826a", "#6f8fa3", "#9a8f78", "#8a8f98"]
+
+
+def lang_color(name):
+    if name not in PALETTE:
+        PALETTE[name] = FALLBACK[len(PALETTE) % len(FALLBACK)]
+    return PALETTE[name]
 
 
 def svg(w, h, body):
-    return (f"<svg xmlns='http://www.w3.org/2000/svg' width='{w}' height='{h}' viewBox='0 0 {w} {h}'>{DEFS}"
-            f"<rect x='.5' y='.5' width='{w-1}' height='{h-1}' rx='10' fill='url(#bg)' stroke='#3d4466'/>"
-            f"<rect x='.5' y='.5' width='{w-1}' height='4' rx='2' fill='url(#ttl)'/>{body}</svg>")
+    return (f"<svg xmlns='http://www.w3.org/2000/svg' width='{w}' height='{h}' viewBox='0 0 {w} {h}'>"
+            f"<rect x='.5' y='.5' width='{w-1}' height='{h-1}' rx='8' fill='#0d1117' stroke='{LINE}'/>{body}</svg>")
 
 
 def title(text):
-    return f"<text x='22' y='36' fill='url(#ttl)' font-size='19' font-weight='700' {FONT}>{escape(text)}</text>"
+    return f"<text x='22' y='36' fill='{TITLE}' font-size='17' font-weight='600' {FONT}>{escape(text)}</text>"
 
 
 H = 220  # shared height so cards sit level
 
 # ---------------------------------------------------------------- stats card
-stats = [("Commits (1y)", cc["totalCommitContributions"], "#3fb950"),
-         ("Pull requests", cc["totalPullRequestContributions"], "#a371f7"),
-         ("Issues", cc["totalIssueContributions"], "#f0883e"),
-         ("Public repos", d["repositories"]["totalCount"], "#58a6ff"),
-         ("Stars earned", sum(r["stargazerCount"] for r in repos), "#e3b341"),
-         ("Followers", d["followers"]["totalCount"], "#f778ba")]
+stats = [("Commits (1y)", cc["totalCommitContributions"], "#5f9e7f"),
+         ("Pull requests", cc["totalPullRequestContributions"], "#4f7cac"),
+         ("Issues", cc["totalIssueContributions"], "#c07a52"),
+         ("Public repos", d["repositories"]["totalCount"], "#6a9aa6"),
+         ("Stars earned", sum(r["stargazerCount"] for r in repos), "#b8934a"),
+         ("Followers", d["followers"]["totalCount"], "#b0675f")]
 b = title(f"{USER} - GitHub Stats")
 for i, (k, v, c) in enumerate(stats):
     x, y = 22 + (i % 2) * 190, 68 + (i // 2) * 30
     b += f"<circle cx='{x+5}' cy='{y-4}' r='5' fill='{c}'/>"
     b += f"<text x='{x+18}' y='{y}' fill='{MUTED}' font-size='13' {FONT}>{k}</text>"
     b += f"<text x='{x+162}' y='{y}' fill='{c}' font-size='14' font-weight='700' text-anchor='end' {FONT}>{v}</text>"
-b += "<line x1='22' y1='158' x2='378' y2='158' stroke='#3d4466'/>"
-for i, (k, v, c) in enumerate([("Current streak", cur, "#ff9640"), ("Longest streak", longest, "#3fb950")]):
+b += f"<line x1='22' y1='158' x2='378' y2='158' stroke='{LINE}'/>"
+for i, (k, v, c) in enumerate([("Current streak", cur, "#c07a52"), ("Longest streak", longest, "#5f9e7f")]):
     x = 22 + i * 190
     b += f"<text x='{x}' y='181' fill='{MUTED}' font-size='13' {FONT}>{k}</text>"
     b += (f"<text x='{x}' y='205' fill='{c}' font-size='22' font-weight='700' {FONT}>{v}"
@@ -118,7 +121,7 @@ for r in repos:
     for e in r["languages"]["edges"]:
         n = e["node"]["name"]
         lang[n] = lang.get(n, 0) + e["size"]
-        color[n] = e["node"]["color"] or "#8b949e"
+        color[n] = lang_color(n)
 top = sorted(lang.items(), key=lambda kv: -kv[1])[:6]
 tot = sum(v for _, v in top) or 1
 b = title("Top Languages")
@@ -126,7 +129,7 @@ for i, (n, v) in enumerate(top):
     y = 64 + i * 26
     pct = 100 * v / tot
     b += f"<text x='22' y='{y}' fill='{FG}' font-size='13' {FONT}>{escape(n)}</text>"
-    b += f"<rect x='130' y='{y-10}' width='200' height='10' rx='5' fill='#21262d'/>"
+    b += f"<rect x='130' y='{y-10}' width='200' height='10' rx='5' fill='{TRACK}'/>"
     b += f"<rect x='130' y='{y-10}' width='{max(200*pct/100, 6):.1f}' height='10' rx='5' fill='{color[n]}'/>"
     b += f"<text x='378' y='{y}' fill='{color[n]}' font-size='13' font-weight='700' text-anchor='end' {FONT}>{pct:.1f}%</text>"
 open("assets/langs.svg", "w", encoding="utf-8").write(svg(400, H, b))
@@ -154,11 +157,11 @@ b = title("Most commits - last 3 years")
 for i, (name, n) in enumerate(best):
     y = 72 + i * 36
     pl = meta[name]["primaryLanguage"] or {}
-    c = pl.get("color") or "#58a6ff"
+    c = lang_color(pl["name"]) if pl.get("name") else "#6a9aa6"
     b += f"<circle cx='30' cy='{y-5}' r='6' fill='{c}'/>"
     b += f"<text x='46' y='{y}' fill='{FG}' font-size='15' font-weight='600' {FONT}>{escape(name)}</text>"
     b += f"<text x='290' y='{y}' fill='{c}' font-size='12' {FONT}>{escape(pl.get('name', ''))}</text>"
-    b += f"<rect x='390' y='{y-11}' width='300' height='12' rx='6' fill='#21262d'/>"
+    b += f"<rect x='390' y='{y-11}' width='300' height='12' rx='6' fill='{TRACK}'/>"
     b += f"<rect x='390' y='{y-11}' width='{max(300*n/mx, 8):.1f}' height='12' rx='6' fill='{c}'/>"
     b += f"<text x='798' y='{y}' fill='{FG}' font-size='14' font-weight='700' text-anchor='end' {FONT}>{n}"
     b += f"<tspan fill='{MUTED}' font-size='12' font-weight='400'> commits</tspan></text>"
@@ -176,7 +179,7 @@ for p in prs[:6]:
     if len(t) > 62:
         t = t[:62].rsplit(" ", 1)[0].rstrip(",:;-(") + "…"
     t = re.sub(r"([\[\]])", r"\\\1", t)
-    lines.append(f"- `{p['mergedAt'][:10]}` \U0001F7E3 **Merged** - [{t}]({p['url']})")
+    lines.append(f"- `{p['mergedAt'][:10]}` \***Merged** - [{t}]({p['url']})")
 activity = "\n".join(lines) or "_No merged pull requests yet._"
 
 # ---------------------------------------------------------------- README
