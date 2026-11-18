@@ -27,7 +27,7 @@
 - `2026-11-03` **Merged** - [Android 0.4.0: the Mac can link with Coucou for Android](https://github.com/Louis-CFM/coucou/pull/1054)
 <!--ACTIVITY:END-->
 
-## 🔝 Top Contributed Repo
+## 📂 Top Contributed Repos
 <!--TOP-REPOS:START-->
 <img src="assets/top-repos.svg" alt="Top contributed repos" width="820"/>
 <!--TOP-REPOS:END-->

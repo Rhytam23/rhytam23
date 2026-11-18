@@ -157,10 +157,10 @@ b = title("Most commits - last 3 years")
 for i, (name, n) in enumerate(best):
     y = 72 + i * 36
     pl = meta[name]["primaryLanguage"] or {}
-    c = lang_color(pl["name"]) if pl.get("name") else "#6a9aa6"
-    b += f"<circle cx='30' cy='{y-5}' r='6' fill='{c}'/>"
+    c = "#4f7cac"  # one calm steel blue for every bar
+    b += f"<circle cx='30' cy='{y-5}' r='5' fill='{c}'/>"
     b += f"<text x='46' y='{y}' fill='{FG}' font-size='15' font-weight='600' {FONT}>{escape(name)}</text>"
-    b += f"<text x='290' y='{y}' fill='{c}' font-size='12' {FONT}>{escape(pl.get('name', ''))}</text>"
+    b += f"<text x='290' y='{y}' fill='{MUTED}' font-size='12' {FONT}>{escape(pl.get('name', ''))}</text>"
     b += f"<rect x='390' y='{y-11}' width='300' height='12' rx='6' fill='{TRACK}'/>"
     b += f"<rect x='390' y='{y-11}' width='{max(300*n/mx, 8):.1f}' height='12' rx='6' fill='{c}'/>"
     b += f"<text x='798' y='{y}' fill='{FG}' font-size='14' font-weight='700' text-anchor='end' {FONT}>{n}"
