@@ -49,12 +49,12 @@ Flashcards from plain `Question:: Answer` lines, linked notes with backlinks, 13
 
 ## ⚡ Recent Merged PRs
 <!--ACTIVITY:START-->
-- `2026-11-18` **Merged** - [feat(client): switch the student dashboard to the new theme…](https://github.com/vicharanashala/spurti/pull/243)
-- `2026-11-18` **Merged** - [feat(client): add UI building blocks and theme (part 1 of 2…](https://github.com/vicharanashala/spurti/pull/242)
-- `2026-11-18` **Merged** - [fix(server): route rejected async handlers to an error…](https://github.com/vicharanashala/spurti/pull/228)
-- `2026-11-12` **Merged** - [Windows and Linux: Flow can hide the pill until you dictate](https://github.com/Louis-CFM/coucou/pull/1090)
-- `2026-11-12` **Merged** - [Android 0.5.0: swipe the island away, Do Not Disturb, six…](https://github.com/Louis-CFM/coucou/pull/1089)
-- `2026-11-03` **Merged** - [Android 0.4.0: the Mac can link with Coucou for Android](https://github.com/Louis-CFM/coucou/pull/1054)
+- `2026-11-18` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [feat(client): switch the student dashboard to the new theme…](https://github.com/vicharanashala/spurti/pull/243)
+- `2026-11-18` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [feat(client): add UI building blocks and theme (part 1 of 2…](https://github.com/vicharanashala/spurti/pull/242)
+- `2026-11-18` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [fix(server): route rejected async handlers to an error…](https://github.com/vicharanashala/spurti/pull/228)
+- `2026-11-12` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [Windows and Linux: Flow can hide the pill until you dictate](https://github.com/Louis-CFM/coucou/pull/1090)
+- `2026-11-12` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [Android 0.5.0: swipe the island away, Do Not Disturb, six…](https://github.com/Louis-CFM/coucou/pull/1089)
+- `2026-11-03` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [Android 0.4.0: the Mac can link with Coucou for Android](https://github.com/Louis-CFM/coucou/pull/1054)
 <!--ACTIVITY:END-->
 
 ## 📂 Top Contributed Repos
