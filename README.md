@@ -3,7 +3,7 @@
 # 
 
 # 💫 About Me:
-👋 Hi, I’m @Rhytam23<br>👀 I’m interested in Coding, learning new coding languages,<br>🌱 I’m currently learning Python, C<br>💞️ I’m looking to collaborate on a Small public project<br>😄 Pronouns: He/Him<br>⚡ Fun fact: I am a better orator than a narrator. Always there to help you
+👋 Hi, I’m @Rhytam23<br>👀 I’m interested in Coding, learning new coding languages,<br>🌱 I’m building NoteNirman, an offline-first notes app live on the Microsoft Store<br>🎓 Studying Data Science at IIT Madras<br>💼 Open for freelance builds<br>💞️ I’m looking to collaborate on a Small public project<br>😄 Pronouns: He/Him<br>⚡ Fun fact: I am a better orator than a narrator. Always there to help you
 
 
 ## 🌐 Socials:
@@ -19,6 +19,9 @@
 
 **Backend & Data**<br>
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=plastic&logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=plastic&logo=express&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-4ea94b?style=plastic&logo=mongodb&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=plastic&logo=supabase&logoColor=white) ![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?style=plastic&logo=socketdotio&logoColor=white) ![Microsoft SQL Server](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=plastic&logo=microsoft%20sql%20server&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=plastic&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=plastic&logo=numpy&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=plastic&logo=pytorch&logoColor=white)
+
+**Cloud & AI**<br>
+![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=plastic&logo=googlecloud&logoColor=white) ![Vertex AI](https://img.shields.io/badge/Vertex%20AI-1A73E8?style=plastic&logo=googlecloud&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-1A73E8?style=plastic&logo=googlegemini&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=plastic&logo=streamlit&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=plastic&logo=kubernetes&logoColor=white)
 
 **Apps & Tooling**<br>
 ![Tauri](https://img.shields.io/badge/Tauri-24C8D8?style=plastic&logo=tauri&logoColor=white) ![Capacitor](https://img.shields.io/badge/Capacitor-119EFF?style=plastic&logo=capacitor&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=plastic&logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=plastic&logo=git&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=plastic&logo=githubactions&logoColor=white) ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=plastic&logo=vitest&logoColor=white) ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=plastic&logo=playwright&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=plastic&logo=vercel&logoColor=white)
