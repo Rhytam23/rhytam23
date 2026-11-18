@@ -179,7 +179,7 @@ for p in prs[:6]:
     if len(t) > 62:
         t = t[:62].rsplit(" ", 1)[0].rstrip(",:;-(") + "…"
     t = re.sub(r"([\[\]])", r"\\\1", t)
-    lines.append(f"- `{p['mergedAt'][:10]}` **Merged** -[{t}]({p['url']})")
+    lines.append(f"- `{p['mergedAt'][:10]}` **Merged** - [{t}]({p['url']})")
 activity = "\n".join(lines) or "_No merged pull requests yet._"
 
 # ---------------------------------------------------------------- README
