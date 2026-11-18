@@ -7,27 +7,27 @@
 
 
 ## 🌐 Socials:
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=plastic&logo=telegram&logoColor=white)](https://t.me/Teslahouse_bot) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=plastic&logo=Instagram&logoColor=white)](https://instagram.com/i_am_rhytam) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=plastic&logo=linkedin&logoColor=white)](https://linkedin.com/in/rhytam-biswas) [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?style=plastic&logo=Pinterest&logoColor=white)](https://pinterest.com/rhytam01) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?style=plastic&logo=Twitch&logoColor=white)](https://twitch.tv/rhytam02) [![X](https://img.shields.io/badge/X-black.svg?style=plastic&logo=X&logoColor=white)](https://x.com/BiswasRhyt20481) [![email](https://img.shields.io/badge/Email-D14836?style=plastic&logo=gmail&logoColor=white)](mailto:2020sumoy@gmail.com) [![Vercel](https://img.shields.io/badge/rhytam-%23000000.svg?style=plastic&logo=vercel&logoColor=white)](https://rhytam.vercel.app/)
+[![Telegram](assets/badges/telegram.svg)](https://t.me/Teslahouse_bot) [![Instagram](assets/badges/instagram-e4405f-svg.svg)](https://instagram.com/i_am_rhytam) [![LinkedIn](assets/badges/linkedin-0077b5-svg.svg)](https://linkedin.com/in/rhytam-biswas) [![Pinterest](assets/badges/pinterest-e60023-svg.svg)](https://pinterest.com/rhytam01) [![Twitch](assets/badges/twitch-9146ff-svg.svg)](https://twitch.tv/rhytam02) [![X](assets/badges/x-black-svg.svg)](https://x.com/BiswasRhyt20481) [![email](assets/badges/email.svg)](mailto:2020sumoy@gmail.com) [![Vercel](assets/badges/rhytam-000000-svg.svg)](https://rhytam.vercel.app/)
 
 
 ## 💻 Tech Stack:
 **Languages**<br>
-![Python](https://img.shields.io/badge/Python-3670A0?style=plastic&logo=python&logoColor=ffdd54) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=plastic&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=plastic&logo=javascript&logoColor=black) ![C](https://img.shields.io/badge/C-00599C?style=plastic&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/C++-00599C?style=plastic&logo=c%2B%2B&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?style=plastic&logo=openjdk&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=plastic&logo=postgresql&logoColor=white)
+![Python](assets/badges/python.svg) ![TypeScript](assets/badges/typescript.svg) ![JavaScript](assets/badges/javascript.svg) ![C](assets/badges/c-2.svg) ![C++](assets/badges/c.svg) ![Java](assets/badges/java.svg) ![SQL](assets/badges/sql.svg)
 
 **Frontend**<br>
-![React](https://img.shields.io/badge/React-20232A?style=plastic&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-000000?style=plastic&logo=nextdotjs&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=plastic&logo=vite&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=plastic&logo=tailwindcss&logoColor=white) ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-000000?style=plastic&logo=framer&logoColor=white) ![Three.js](https://img.shields.io/badge/Three.js-000000?style=plastic&logo=threedotjs&logoColor=white)
+![React](assets/badges/react.svg) ![Next.js](assets/badges/next-js.svg) ![Vite](assets/badges/vite.svg) ![Tailwind CSS](assets/badges/tailwind-css.svg) ![Framer Motion](assets/badges/framer-motion.svg) ![Three.js](assets/badges/three-js.svg)
 
 **Backend & Data**<br>
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=plastic&logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=plastic&logo=express&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-4ea94b?style=plastic&logo=mongodb&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=plastic&logo=supabase&logoColor=white) ![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?style=plastic&logo=socketdotio&logoColor=white) ![Microsoft SQL Server](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=plastic&logo=microsoft%20sql%20server&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=plastic&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=plastic&logo=numpy&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=plastic&logo=pytorch&logoColor=white)
+![Node.js](assets/badges/node-js.svg) ![Express](assets/badges/express.svg) ![MongoDB](assets/badges/mongodb.svg) ![Supabase](assets/badges/supabase.svg) ![Socket.IO](assets/badges/socket-io.svg) ![Microsoft SQL Server](assets/badges/microsoft-sql-server.svg) ![Pandas](assets/badges/pandas.svg) ![NumPy](assets/badges/numpy.svg) ![PyTorch](assets/badges/pytorch.svg)
 
 **Cloud & AI**<br>
-![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=plastic&logo=googlecloud&logoColor=white) ![Vertex AI](https://img.shields.io/badge/Vertex%20AI-1A73E8?style=plastic&logo=googlecloud&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-1A73E8?style=plastic&logo=googlegemini&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=plastic&logo=streamlit&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=plastic&logo=kubernetes&logoColor=white)
+![Google Cloud](assets/badges/google-cloud.svg) ![Vertex AI](assets/badges/vertex-ai.svg) ![Gemini](assets/badges/gemini.svg) ![Streamlit](assets/badges/streamlit.svg) ![Kubernetes](assets/badges/kubernetes.svg)
 
 **Apps & Tooling**<br>
-![Tauri](https://img.shields.io/badge/Tauri-24C8D8?style=plastic&logo=tauri&logoColor=white) ![Capacitor](https://img.shields.io/badge/Capacitor-119EFF?style=plastic&logo=capacitor&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=plastic&logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=plastic&logo=git&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=plastic&logo=githubactions&logoColor=white) ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=plastic&logo=vitest&logoColor=white) ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=plastic&logo=playwright&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=plastic&logo=vercel&logoColor=white)
+![Tauri](assets/badges/tauri.svg) ![Capacitor](assets/badges/capacitor.svg) ![Docker](assets/badges/docker.svg) ![Git](assets/badges/git.svg) ![GitHub Actions](assets/badges/github-actions.svg) ![Vitest](assets/badges/vitest.svg) ![Playwright](assets/badges/playwright.svg) ![Vercel](assets/badges/vercel.svg)
 
 **Design**<br>
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=plastic&logo=figma&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-00C4CC?style=plastic&logo=Canva&logoColor=white)
+![Figma](assets/badges/figma.svg) ![Canva](assets/badges/canva.svg)
 
 
 ## 📊 GitHub Stats:
@@ -55,7 +55,7 @@
 ![snake gif](https://github.com/Rhytam23/Rhytam23/blob/output/github-snake-dark.svg)
 
   ## 💰 You can help me by Donating
-  [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/2020sumoyi) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/rhhytam01) 
+  [![BuyMeACoffee](assets/badges/buy-me-a-coffee.svg)](https://buymeacoffee.com/2020sumoyi) [![PayPal](assets/badges/paypal.svg)](https://paypal.me/rhhytam01) 
 
 
 
