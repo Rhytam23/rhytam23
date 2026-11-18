@@ -20,7 +20,15 @@
 
 
 ## 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=Rhytam23&limit=5&theme=dark&combine_all_yearly_contributions=true)
+<!--TOP-REPOS:START-->
+| Repo | Commits | Language | ⭐ |
+|---|---:|---|---:|
+| [Rhytam23/note-saver](https://github.com/Rhytam23/note-saver) | 199 | TypeScript | 0 |
+| [Rhytam23/social](https://github.com/Rhytam23/social) | 133 | TypeScript | 1 |
+| [Rhytam23/nitisetu](https://github.com/Rhytam23/nitisetu) | 45 | JavaScript | 0 |
+| [Rhytam23/ccn](https://github.com/Rhytam23/ccn) | 45 | Python | 0 |
+| [Louis-CFM/coucou](https://github.com/Louis-CFM/coucou) | 40 | Swift | 7326 |
+<!--TOP-REPOS:END-->
 
 ---
 [![](https://visitcount.itsvg.in/api?id=Rhytam23&icon=0&color=0)](https://visitcount.itsvg.in)
