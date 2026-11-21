@@ -34,12 +34,12 @@ Flashcards from plain `Question:: Answer` lines, linked notes with backlinks, 13
 
 ## ⚡ Recent Merged PRs
 <!--ACTIVITY:START-->
+- `2026-11-20` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [Tests: the chat PDF test gets its own temp folder (flaky on…](https://github.com/Louis-CFM/coucou/pull/1134)
 - `2026-11-19` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [CI only: Android 0.6.0 (do not merge)](https://github.com/Rhytam23/coucou/pull/33)
 - `2026-11-19` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [Docs: Android links and Versions rows point to 0.5.0](https://github.com/Louis-CFM/coucou/pull/1098)
 - `2026-11-19` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [Fix accessibility and robustness issues from the page audit](https://github.com/Rhytam23/kolam-2/pull/4)
 - `2026-11-18` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [feat(client): switch the student dashboard to the new theme…](https://github.com/vicharanashala/spurti/pull/243)
 - `2026-11-18` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [feat(client): add UI building blocks and theme (part 1 of 2…](https://github.com/vicharanashala/spurti/pull/242)
-- `2026-11-18` <img src='assets/merge.svg' width='16' height='16' alt='merged'/> [fix(server): route rejected async handlers to an error…](https://github.com/vicharanashala/spurti/pull/228)
 <!--ACTIVITY:END-->
 
 ## 📂 Top Contributed Repos
